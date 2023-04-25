@@ -1,0 +1,24 @@
+{
+   "estudiantes": [
+      {
+         "nombre": "Naomy",
+         "edad": 30,
+         "pais": "México",
+         "hobbies": {
+            "Cocinar": "platos",
+            "Jugar videojuegos": "minecra",
+            "patinar": "no"
+         }
+      },
+      {
+         "nombre": "alex",
+         "edad": 19,
+         "pais": "Andorra",
+         "hobbies": {
+            "Cocinar": "gatos",
+            "Jugar videojuegos": "minecra",
+            "patinar": "no"
+         }
+      }
+   ]
+}

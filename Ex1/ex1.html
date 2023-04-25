@@ -1,0 +1,129 @@
+<style>
+    /* Estilos generales */
+    body {
+        color: #fff;
+        background: rgb(208, 118, 219);
+        background: radial-gradient(circle, rgba(208, 118, 219, 1) 31%, rgba(141, 0, 255, 1) 56%, rgba(97, 17, 208, 1) 71%, rgba(50, 79, 117, 1) 100%);
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    table {
+        position: absolute;
+        left: 10%;
+        top: 80px;
+        width: 80%;
+        border-collapse: collapse;
+        margin: 50px 0px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .input_area {
+        margin: 60px;
+        position: absolute;
+        left: 70%;
+    }
+
+    select {
+        width: 200px;
+        height: 25px;
+        background-color: #0c0c0c;
+        color: #fff;
+        border: #892db4;
+    }
+
+    th,
+    td {
+        padding: 15px 40px;
+        text-align: left;
+        vertical-align: top;
+        text-align: center;
+    }
+
+    th {
+        background-color: #0c0c0c;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    tr {
+        background-color: rgba(0, 0, 0, 0.487) ;
+    }
+
+    tr:nth-child(even) {
+        background-color: #00000059;
+    }
+
+    /* Estilos para la imagen de la película */
+    .poster {
+        max-width: 150px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Estilos para la sinopsis */
+    #sinopsis {
+        white-space: pre-wrap;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 15px 0;
+        color: #cfc2c2;
+    }
+</style>
+
+<div id="info">
+    <div class="input_area">
+        <label for="genero">Select a genre: </label>
+        <select name="genero" id="genero">
+            <option value="" selected>Selecciona</option>
+            <option value="Drama">Drama</option>
+            <option value="Romance">Romance</option>
+            <option value="Terror">Terror</option>
+        </select>
+    </div>
+    <div id="movies">
+    </div>
+</div>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>EXERCICI 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="info"></div>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "./datos.json",
+                dataType: "json",
+                success: function (data) {
+                    var info = "<table><tr><th></th><th>Titulo</th><th>Genero</th><th>Director</th>"
+                    info += "<th>Lanzamiento</th><th>Duracion</th><th>Sinopsis</th></tr>";
+                    for (var i = 0; i < data.pelicula.length; i++) {
+                        info += "<tr><td><img class='poster' src='img/" + data.pelicula[i].foto + ".jpg'>   </td>";
+                        info += "<td>" + data.pelicula[i].Titulo + "</td>";
+                        info += "<td>" + data.pelicula[i].Genero + "</td>";
+                        info += "<td>" + data.pelicula[i].Director + "</td>";
+                        info += "<td>" + data.pelicula[i].Year + "</td>";
+                        info += "<td>" + data.pelicula[i].Duracion + "</td>";
+                        info += "<td id='sinopsis'>" + data.pelicula[i].Sinopsis + "</td>";
+                        info += "</tr>";
+                        // info += 
+                    }
+
+                    info += "</table>"
+                    $("#movies").html(info);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

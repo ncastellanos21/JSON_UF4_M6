@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Ejemplo de carga de datos JSON con jQuery y AJAX</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   </head>
+   <body>
+      <div id="informacion"></div>
+
+      <script>
+         $(document).ready(function(){
+            $.ajax({
+               url: "datos.json",
+               dataType: "json",
+               success: function(data){
+                  var informacion = "";
+                  informacion += "<p>Nombre: " + data.nombre + "</p>";
+                  informacion += "<p>Edad: " + data.edad + "</p>";
+                  informacion += "<p>País: " + data.pais + "</p>";
+                  informacion += "<p>Hobbies:</p>";
+                  informacion += "<ul>";
+                  //$.each(data.hobbies, function(index, value){
+                  //   informacion += "<li>" + value + "</li>";
+                  //});
+				  for (var i = 0; i < data.hobbies.length; i++) {
+					informacion += "<li>" + data.hobbies[i];
+				  }
+            
+                  informacion += "</ul>";
+                  $("#informacion").html(informacion);
+               }
+            });
+         });
+      </script>
+   </body>
+</html>

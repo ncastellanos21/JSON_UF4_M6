@@ -1,0 +1,10 @@
+{
+   "nombre": "Juan",
+   "edad": 30,
+   "pais": "México",
+   "hobbies": [
+      "Leer",
+      "Cocinar",
+      "Jugar videojuegos"
+   ]
+}

@@ -1,0 +1,76 @@
+{
+    "pelicula": [
+        {
+            "foto": "la_milla_verde",
+            "Titulo": "La milla verde",
+            "Genero": "Drama",
+            "Director": "Frank Darabont",
+            "Year": "1999",
+            "Duracion": "188 mins",
+            "Sinopsis": "Paul Edgecomb es un funcionario de prisiones que vigila 'la milla verde', el pasillo de linóleo que los condenados a muerte recorren hasta llegar a la silla eléctrica. John Coffey, un gigantesco convicto acusado de violar y asesinar a dos niñas de nueve años, está esperando su inminente ejecución. Tras una personalidad ingenua, John esconde un don sobrenatural con el que contagia su sentido de espiritualidad y humanidad a todos sus compañeros de prisión."
+        },
+        {
+            "foto": "la_huerfana",
+            "Titulo": "La huerfana",
+            "Genero": "Terror",
+            "Director": "Jaume Collet-Serra",
+            "Year": "2009",
+            "Duracion": "123 mins",
+            "Sinopsis": "Devastada por la perdida del bebé que estaban esperando, Kate y su marido deciden adoptar a una niña en el orfanato local. Sin embargo, al poco tiempo de tener a la pequeña en casa, la niña no parece ser tan inocente como Kate cree."
+        },
+        {
+            "foto": "the_unborn",
+            "Titulo": "The Unborn",
+            "Genero": "Terror",
+            "Director": "David S. Goyer",
+            "Year": "2009",
+            "Duracion": "87 minutos",
+            "Sinopsis": "Casey es una joven que sufre los ataques de un dybbuk, un alma en pena. Este alma corresponde a un joven que murió en el campo de concentración de Auschwitz. Tendrá que recurrir a un especialista en temas paranormales para acabar con esta maldición."
+        },
+        {
+            "foto": "in_time",
+            "Titulo": "In time",
+            "Genero": "Drama",
+            "Director": "Andrew Niccol",
+            "Year": "2011",
+            "Duracion": "109 mins",
+            "Sinopsis": "El hallazgo de una fórmula contra el envejecimiento trae consigo no sólo superpoblación, sino también la transformación del tiempo en moneda de cambio que permite sufragar tanto lujos como necesidades. En este contexto, Will, un obrero que consigue casualmente una inmensa cantidad de tiempo, debe huir de unos policías corruptos, acompañado de una rehén adinerada."
+        },
+        {
+            "foto": "da_vinci",
+            "Titulo": "El código Da Vinci",
+            "Genero": "Drama",
+            "Director": "Ron Howard",
+            "Year": "2006",
+            "Duracion": "148 mins",
+            "Sinopsis": "Un asesinato en el Louvre y una serie de pistas en los cuadros de Leonardo conducen a un misterio que podría sacudir los cimientos del cristianismo. Basada en la novela de Dan Brown."
+        },
+        {
+            "foto": "a_dos_metros_de_ti",
+            "Titulo": "A dos metros de ti",
+            "Genero": "Drama",
+            "Director": "Ron Howard",
+            "Year": "2006",
+            "Duracion": "148 mins",
+            "Sinopsis": "Dos adolescentes, Stella y Will, se encuentran en un hospital debido a las graves enfermedades que padecen y que amenazan su vida. Poco a poco comienzan a conocerse y enamorarse, pero deberán enfrentarse a las reglas hospitalarias que los alejan."
+        },
+        {
+            "foto": "yo_antes_de_ti",
+            "Titulo": "Yo antes de ti",
+            "Genero": "Romance",
+            "Director": "Thea Sharrock",
+            "Year": "2016",
+            "Duracion": "110 mins",
+            "Sinopsis": "Louisa una chica inestable y creativa, reside en un pequeño pueblo de la campiña inglesa. Vive sin rumbo y va de un trabajo a otro para ayudar a su familia a llegar a fin de mes. Sin embargo, un nuevo trabajo pondrá a prueba su habitual alegría. En el castillo local, se ocupa de cuidar y acompañar a Will Traynor, un joven y rico banquero que se quedó paralítico tras un accidente."
+        },
+        {
+            "foto": "3msc",
+            "Titulo": "3 metros sobre el cielo",
+            "Genero": "Romance",
+            "Director": "Fernando González Molina",
+            "Year": "2010",
+            "Duracion": "118 mins",
+            "Sinopsis": "En Barcelona, dos jóvenes que pertenecen a mundos opuestos se conocen. Él, es un joven apuesto y problemático con tendencias violentas llamado Hugo ('H'), y ella, es una niña de bien llamada Babi. Hugo y Babi vivirán una relación intensa con la que aprenderán lo que significa el primer amor."
+        }
+    ]
+}
