@@ -71,6 +71,42 @@
             "Year": "2010",
             "Duracion": "118 mins",
             "Sinopsis": "En Barcelona, dos jóvenes que pertenecen a mundos opuestos se conocen. Él, es un joven apuesto y problemático con tendencias violentas llamado Hugo ('H'), y ella, es una niña de bien llamada Babi. Hugo y Babi vivirán una relación intensa con la que aprenderán lo que significa el primer amor."
+        },
+        {
+            "foto": "la_casa_del_lago",
+            "Titulo": "La casa del lago",
+            "Genero": "Romance",
+            "Director": "Alejandro Agresti",
+            "Year": "2006",
+            "Duracion": "105 mins",
+            "Sinopsis": "Una doctora solitaria que en el pasado habitaba en una hermosa casa a la orilla de un lago se enamora, a través de la correspondencia, de su más actual residente, un arquitecto frustrado. Cuando ellos descubren que en realidad están viviendo con dos años de diferencia, la pareja debe resolver el misterio que protagonizan."
+        },
+        {
+            "foto": "novia_fugitiva",
+            "Titulo": "Novia a la fuga",
+            "Genero": "Romance",
+            "Director": "Garry Marshall",
+            "Year": "1999",
+            "Duracion": "116 mins",
+            "Sinopsis": "Un periodista escucha la historia de Maggie, una mujer que siempre deja plantados a sus novios en el altar, y escribe un artículo ofensivo por el que es despedido. Ahora el único modo de recuperar su trabajo es conocer a Maggie y contar la verdad."
+        },
+        {
+            "foto": "el_aro_2",
+            "Titulo": "El aro",
+            "Genero": "Terror",
+            "Director": "Hideo Nakata",
+            "Year": "1999",
+            "Duracion": "95 minutos",
+            "Sinopsis": "Una mujer investiga a fondo una leyenda mortal sobre una videocinta mensajera, que trae la muerte en siete días."
+        },
+        {
+            "foto": "monster_house",
+            "Titulo": "Monster House",
+            "Genero": "Terror",
+            "Director": "Gil Kenan",
+            "Year": "2006",
+            "Duracion": "91 minutos",
+            "Sinopsis": "Ningún adulto le cree a tres chicos que afirman que una residencia de la vecindad es una criatura viviente que representa un peligro. Ante la cercanía del Día de Brujas, el trío debe hallar la forma de destruir su estructura antes de que los niños inocentes resulten afectados."
         }
     ]
 }
