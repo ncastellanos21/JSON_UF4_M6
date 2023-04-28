@@ -107,6 +107,33 @@
             "Year": "2006",
             "Duracion": "91 minutos",
             "Sinopsis": "Ningún adulto le cree a tres chicos que afirman que una residencia de la vecindad es una criatura viviente que representa un peligro. Ante la cercanía del Día de Brujas, el trío debe hallar la forma de destruir su estructura antes de que los niños inocentes resulten afectados."
+        },
+        {
+            "foto": "multiple",
+            "Titulo": "Multiple",
+            "Genero": "Terror",
+            "Director": "M. Night Shyamalan",
+            "Year": "2016",
+            "Duracion": "117 minutos",
+            "Sinopsis": "A pesar de que Kevin le ha demostrado a su psiquiatra de confianza que posee 23 personalidades diferentes, aún queda una misteriosa por emerger decidida a dominar a todas las demás."
+        },
+        {
+            "foto": "tarzan",
+            "Titulo": "La leyenda de Tarzan",
+            "Genero": "Drama",
+            "Director": "David Yates",
+            "Year": "2016",
+            "Duracion": "110 minutos",
+            "Sinopsis": "El célebre hombre mono, que lleva más de diez años viviendo en Gran Bretaña, debe enfrentarse a un temible enemigo que pretende acabar con todos y todo lo que le importa en el Congo, además de verse amenazado por antiguos adversarios que han estado esperando su retorno a África."
+        },
+        {
+            "foto": "un_monstruo_viene_a_verme",
+            "Titulo": "Un monstruo viene a verme",
+            "Genero": "Drama",
+            "Director": "Jaun Antonio Bayona",
+            "Year": "2016",
+            "Duracion": "108 minutos",
+            "Sinopsis": "Tras la separación de sus padres, Connor tiene que llevar las riendas de su casa ya que su madre está enferma de cáncer. El pequeño intentará superar sus miedos y fobias con la ayuda de un monstruo con el que se encuentra todas las noches."
         }
     ]
 }
