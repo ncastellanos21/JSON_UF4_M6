@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>EXERCICI 1</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="ex2.html">
+    <link rel="stylesheet" href="ex2.css">
 </head>
 
 <body>
@@ -25,36 +25,44 @@
 
     <script>
         $(document).ready(function () {
-            //button evento
-            $("#buscar").click(function () {
-                let genre = $("#genre option:selected").text();
-                let year = $("#year option:selected").text();
-                console.log(genre + ", " + year);
-                $.ajax({
-                    url: "./datos.json",
-                    dataType: "json",
-                    success: function (data) {
-                        var info = "<table><tr><th></th><th>Titulo</th><th>Genero</th><th>Director</th>"
-                        info += "<th>Lanzamiento</th><th>Duracion</th><th>Sinopsis</th></tr>";
-                        for (var i = 0; i < data.pelicula.length; i++) {
-                            if ((genre == data.pelicula[i].Genero && year == data.pelicula[i].Year) || (year=="All" && genre == data.pelicula[i].Genero) 
-                            || (genre=="All" && year == data.pelicula[i].Year) || (genre == "All" && year == "All")) {
-                                info += "<tr><td><img class='poster' src='img/" + data.pelicula[i].foto + ".jpg'>   </td>";
-                                info += "<td>" + data.pelicula[i].Titulo + "</td>";
-                                info += "<td>" + data.pelicula[i].Genero + "</td>";
-                                info += "<td>" + data.pelicula[i].Director + "</td>";
-                                info += "<td>" + data.pelicula[i].Year + "</td>";
-                                info += "<td>" + data.pelicula[i].Duracion + "</td>";
-                                info += "<td id='sinopsis'>" + data.pelicula[i].Sinopsis + "</td>";
+            $.ajax({
+                url: "https://api.themoviedb.org/3/movie/popular",
+                data: {
+                    api_key: "70e3f40893b2eca95529f5c72c1a3f1c"
+                },
+                success: function (data) {
+                    console.log(data);
+                    var peliculas = data.results;
+                    var info = "<table><tr><th></th><th>Titulo</th><th>Genero</th><th>Director</th>";
+                    info += "<th>Lanzamiento</th><th>Duracion</th><th>Sinopsis</th></tr>";
+                    for (var i = 0; i <peliculas.length; i++) {
+                        // if ((genre == peliculas[i].Genero && year == peliculas[i].Year) || (year=="All" && genre == peliculas[i].Genero) 
+                        // || (genre=="All" && year == peliculas[i].Year) || (genre == "All" && year == "All")) {
+                        $.ajax({
+                            url: "https://api.themoviedb.org/3/movie/" + peliculas[i].id,
+                            data: {
+                                api_key: "70e3f40893b2eca95529f5c72c1a3f1c"
+                            },
+                            success: function (filmdetails) {
+                                console.log("eee" + filmdetails);
+                                let compania = filmdetails.production_companies.length == 0 ? "No hay" : filmdetails.production_companies[0].name;
+                                info += "<tr><td><img class='poster' src='https://image.tmdb.org/t/p/w500" + filmdetails.poster_path + "'></td>";
+                                info += "<td>" + filmdetails.original_title + "</td>";
+                                info += "<td>" + filmdetails.genres[0].name + "</td>";
+                                 info += "<td>" + compania + "</td>";
+                                info += "<td>" + filmdetails.release_date + "</td>";
+                                info += "<td>" + filmdetails.Duracion + "</td>";
+                                info += "<td id='sinopsis'>" + filmdetails.overview + "</td>";
                                 info += "</tr>";
+                                
+                                 $("#movies").html(info);
                             }
-                            // info += 
-                        }
-
-                        info += "</table>"
-                        $("#movies").html(info);
-                    }
-                });
+                        });
+                        // }
+                        // info += 
+                    };
+                   $("#movies").append("</table>");
+                }
             });
         });
     </script>
