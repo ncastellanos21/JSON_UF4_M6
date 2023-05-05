@@ -1,3 +1,88 @@
+<style>
+    /* Estilos generales */
+    body {
+        color: #fff;
+        background: rgb(208, 118, 219);
+        background: radial-gradient(circle, rgba(208, 118, 219, 1) 31%, rgba(141, 0, 255, 1) 56%, rgba(97, 17, 208, 1) 71%, rgba(50, 79, 117, 1) 100%);
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    table {
+        position: absolute;
+        left: 2.5%;
+        top: 80px;
+        width: 95%;
+        border-collapse: collapse;
+        margin: 50px 0px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #buscador {
+        display: flex;
+        flex-direction: row;
+        margin: 50px;
+        justify-content: space-between;
+    }
+
+    select {
+        width: 200px;
+        height: 25px;
+        background-color: #0c0c0c;
+        color: #fff;
+        border: #892db4;
+    }
+
+    th,
+    td {
+        padding: 10px 28px;
+        text-align: left;
+        vertical-align: top;
+        text-align: center;
+    }
+
+    th {
+        background-color: #0c0c0c;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    tr {
+        background-color: rgba(0, 0, 0, 0.487);
+    }
+
+    tr:nth-child(even) {
+        background-color: #00000059;
+    }
+
+    /* Estilos para la imagen de la película */
+    .poster {
+        max-width: 150px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Estilos para la sinopsis */
+    #sinopsis {
+        white-space: pre-wrap;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 15px 0;
+        color: #cfc2c2;
+    }
+
+    button {
+        background-color: #fff;
+        color: #000;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+    }
+</style>
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +90,6 @@
     <meta charset="UTF-8">
     <title>EXERCICI 1</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="ex2.css">
 </head>
 
 <body>
@@ -15,26 +99,20 @@
             <select name="genre" id="genre">
                 <option value="" selected>All</option>
                 <option value="Drama">Drama</option>
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Animation">Animation</option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Horror">Horror</option>
                 <option value="Romance">Romance</option>
-                <option value="Terror">Terror</option>
             </select>
         </div>
         <div class="input_area">
             <label for="genero">Year: </label>
             <select name="year" id="year">
                 <option value="" selected>All</option>
-                <option value=1999>1999</option>
-                <option value=2006>2006</option>
-                <option value=2009>2009</option>
-                <option value=2010>2010</option>
-                <option value=2011>2011</option>
-                <option value=2016>2016</option>
-                <option value=2017>2017</option>
-                <option value=2018>2018</option>
-                <option value=2019>2019</option>
-                <option value=2020>2020</option>
-                <option value=2021>2021</option>
                 <option value=2022>2022</option>
+                <option value=2021>2023</option>
             </select>
         </div>
         <button id="buscar">Search</button>
@@ -66,9 +144,9 @@
                                 success: function (filmdetails) {
                                     console.log("eee" + filmdetails);
                                     let year_date = filmdetails.release_date;
-                                    console.log("aqui: " + year_date);
                                     let genre_pelicula = filmdetails.genres[0].name;
-                                    year_date = year_date.substr(0, 3);
+                                    year_date = year_date.substr(0, 4);
+                                    console.log("aqui: " + year_date);
                                     if ((genre == genre_pelicula && year == year_date) || (year == "All" && genre == genre_pelicula)
                                         || (genre == "All" && year == year_date) || (genre == "All" && year == "All")) {
                                         let compania = filmdetails.production_companies.length == 0 ? "No hay" : filmdetails.production_companies[0].name;
