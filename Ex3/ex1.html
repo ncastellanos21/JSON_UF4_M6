@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>EXERCICI 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="ex1.css">
+    <script>
+        $(document).ready(function () {
+            // Cargar las películas mediante AJAX
+            $.ajax({
+                url: "exemple.php",
+                dataType: "json",
+                success: function (peliculas) {
+                    // Recorrer las películas y agregarlas a la tabla
+                    $.each(peliculas, function (index, pelicula) {
+                        $("<tr>").append(
+                            $("<td>").html('<img class="poster" src="img/' + pelicula.poster + '.jpg">'),
+                            $("<td>").text(pelicula.titulo),
+                            $("<td>").text(pelicula.genero),
+                            $("<td>").text(pelicula.duracion),
+                            $("<td>").text(pelicula.director),
+                            $("<td>").text(pelicula.sinopsis),
+                            $("<td>").text(pelicula.lanzamiento)
+                        ).appendTo("#tabla_peliculas");
+                    });
+                },
+                error: function () {
+                    alert("Error al cargar las películas");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="buscador">
+        <div class="input_area">
+            <label for="genero">Genre: </label>
+            <select name="genre" id="genre">
+                <option value="" selected>All</option>
+                <option value="Drama">Drama</option>
+                <option value="Romance">Romance</option>
+                <option value="Terror">Terror</option>
+            </select>
+        </div>
+        <div class="input_area">
+            <label for="genero">Year: </label>
+            <select name="year" id="year">
+                <option value="" selected>All</option>
+                <option value=1999>1999</option>
+                <option value=2006>2006</option>
+                <option value=2009>2009</option>
+                <option value=2010>2010</option>
+                <option value=2011>2011</option>
+                <option value=2016>2016</option>
+                <option value=2017>2017</option>
+                <option value=2018>2018</option>
+                <option value=2019>2019</option>
+                <option value=2020>2020</option>
+                <option value=2021>2021</option>
+                <option value=2022>2022</option>
+            </select>
+        </div>
+        <button id="buscar">Search</button>
+    </div>
+    <div id="movies">
+        <table id="tabla_peliculas">
+            <thead>
+                <tr>
+                    <th>Cartelera</th>
+                    <th>Título</th>
+                    <th>Género</th>
+                    <th>Duración</th>
+                    <th>Director</th>
+                    <th>Sinopsis</th>
+                    <th>Año de lanzamiento</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

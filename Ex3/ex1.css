@@ -1,0 +1,72 @@
+/* Estilos generales */
+body {
+    color: #fff;
+    background: rgb(208, 118, 219);
+    background: radial-gradient(circle, rgba(208, 118, 219, 1) 31%, rgba(141, 0, 255, 1) 56%, rgba(97, 17, 208, 1) 71%, rgba(50, 79, 117, 1) 100%);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+table {
+    position: absolute;
+    left: 2.5%;
+    top: 80px;
+    width: 95%;
+    border-collapse: collapse;
+    margin: 50px 0px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#buscador {
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    justify-content: space-between;
+}
+
+select {
+    width: 200px;
+    height: 25px;
+    background-color: #0c0c0c;
+    color: #fff;
+    border: #892db4;
+}
+
+th,
+td {
+    padding: 10px 15px;
+    text-align: center;
+    vertical-align: top;
+    text-align: center;
+}
+
+th {
+    background-color: #0c0c0c;
+    color: #fff;
+    font-size: 18px;
+}
+
+tr {
+    background-color: rgba(0, 0, 0, 0.487);
+}
+
+tr:nth-child(even) {
+    background-color: #00000059;
+}
+
+/* Estilos para la imagen de la película */
+.poster {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para la sinopsis */
+#sinopsis {
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 15px 0;
+    color: #cfc2c2;
+}
