@@ -9,26 +9,35 @@
     <script>
         $(document).ready(function () {
             // Cargar las películas mediante AJAX
-            $.ajax({
-                url: "exemple.php",
-                dataType: "json",
-                success: function (peliculas) {
-                    // Recorrer las películas y agregarlas a la tabla
-                    $.each(peliculas, function (index, pelicula) {
-                        $("<tr>").append(
-                            $("<td>").html('<img class="poster" src="img/' + pelicula.poster + '.jpg">'),
-                            $("<td>").text(pelicula.titulo),
-                            $("<td>").text(pelicula.genero),
-                            $("<td>").text(pelicula.duracion),
-                            $("<td>").text(pelicula.director),
-                            $("<td>").text(pelicula.sinopsis),
-                            $("<td>").text(pelicula.lanzamiento)
-                        ).appendTo("#tabla_peliculas");
-                    });
-                },
-                error: function () {
-                    alert("Error al cargar las películas");
-                }
+            $("#buscar").click(function () {
+                let genre = $('#genre').val();
+                let year = $('#year').val();
+                console.log(genre + " + " + year);
+                $.ajax({
+                    url: "exemple.php",
+                    dataType: "json",
+                    method: 'POST',
+                    data: { genre: genre, year: year },
+
+                    success: function (peliculas) {
+                        console.log("ee ");
+                        // Recorrer las películas y agregarlas a la tabla
+                        $.each(peliculas, function (index, pelicula) {
+                            $("<tr>").append(
+                                $("<td>").html('<img class="poster" src="img/' + pelicula.poster + '.jpg">'),
+                                $("<td>").text(pelicula.titulo),
+                                $("<td>").text(pelicula.genero),
+                                $("<td>").text(pelicula.duracion),
+                                $("<td>").text(pelicula.director),
+                                $("<td>").text(pelicula.sinopsis),
+                                $("<td>").text(pelicula.lanzamiento)
+                            ).appendTo("#tabla_peliculas");
+                        });
+                    },
+                    error: function () {
+                        alert("Error al cargar las películas");
+                    }
+                });
             });
         });
     </script>
@@ -63,7 +72,7 @@
                 <option value=2022>2022</option>
             </select>
         </div>
-        <button id="buscar">Search</button>
+        <input type="submit" value="search" id="buscar">
     </div>
     <div id="movies">
         <table id="tabla_peliculas">
