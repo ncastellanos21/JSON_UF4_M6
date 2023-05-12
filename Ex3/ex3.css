@@ -1,8 +1,7 @@
 /* Estilos generales */
 body {
     color: #fff;
-    background: rgb(208, 118, 219);
-    background: radial-gradient(circle, rgba(208, 118, 219, 1) 31%, rgba(141, 0, 255, 1) 56%, rgba(97, 17, 208, 1) 71%, rgba(50, 79, 117, 1) 100%);
+    background-color: rgba(97, 17, 208, 1);
     font-family: Arial, sans-serif;
     text-align: center;
 }
@@ -15,6 +14,14 @@ table {
     border-collapse: collapse;
     margin: 50px 0px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#buscador {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: flex-end;
+    margin: 5em;
 }
 
 #buscador form {
@@ -69,4 +76,18 @@ tr:nth-child(even) {
     line-height: 1.5;
     padding: 15px 0;
     color: #cfc2c2;
+}
+
+/* ESTLOS DEL BOTÓN */
+#buscar {
+    width: 10em;
+    height: 2em;
+    color: #fff;
+    font-size: 1em;
+    background-color: #0c0c0c;
+}
+
+#buscar:hover {
+    box-shadow: 0px 0px 4px 5px #892db464;
+    cursor: pointer;
 }
